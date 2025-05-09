@@ -1,0 +1,139 @@
+---
+// Establece el título de la página y aplica el layout base
+title: "Carreteras 2000 S.A."
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ClienteCard from '../components/ClienteCard.astro'
+import ContactCard from '../components/ContactCard.astro'
+import WhatsAppButton from '../components/WhatsAppButton.astro'
+---
+
+<BaseLayout>
+	<!-- Hero de bienvenida -->
+	<section class="py-16">
+	<div class="mt-50 mx-auto px-6 py-8 bg-white/80 dark:bg-gray-900/80">
+		<h1 class="text-3xl text-center md:text-5xl font-bold text-gray-800 dark:text-white mb-6">
+		EMPRESA
+		</h1>
+		<div class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-justify ">
+			<p>Con más de 30 años de trayectoria en obras públicas y privadas, nos posicionamos como referentes en soluciones viales. Nuestra experiencia, tecnología y compromiso nos permiten ofrecer productos y servicios con altos estándares de calidad en todo el país.
+			Soluciones confiables en pavimentos y hormigón.
+			<b>Carreteras 2000 S.A.</b> ofrece soluciones integrales para la construcción y conservación de pavimentos. Nuestra experiencia se centra en brindar resultados duraderos y una atención dedicada a cada cliente.
+			Producimos y comercializamos <b>RAPIBACH</b> y <b>RAPIROD</b>, reparadores instantáneos de pavimentos patentados (Nro 228.977). Además, contamos con una <b>planta de hormigón</b> para el suministro a diversas obras.
+			Trabajamos en <b>obras públicas y privadas</b>, ofreciendo nuestra capacidad en:</p>
+			<br/>
+			<ul class="list-disc list-inside">
+				<li>Obras industriales y comerciales.</li>
+				<li>Movimiento de suelos.</li>
+				<li>Pavimentación.</li>
+				<li>Provisión de hormigón.</li>
+				<li>Provisión de mezclas asfáltcias.</li>
+			</ul>
+			<br/>
+			<p>Nuestro compromiso es ofrecer soluciones efectivas y contribuir al <b>desarrollo de la comunidad</b>.</p>
+			<p></p><b>Contáctenos para conocer nuestras propuestas.</b></p>
+		</div>
+	</div>
+	</section>
+
+	<!-- Sección Productos -->
+	<section class="py-16" id="productos">
+		<div class="bg-gray-50/80 dark:bg-gray-800/80">
+			<div class="max-w-6xl mx-auto px-6 py-8">
+				<h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-12 text-center">NUESTROS PRODUCTOS</h2>
+				<div class="grid md:grid-cols-3 gap-8">
+					<!-- Producto 1 -->
+					<div class="bg-white dark:bg-gray-700 rounded-xl shadow p-6">
+					<h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Mezclas Asfálticas en Caliente</h3>
+					<p class="text-gray-600 dark:text-gray-300">Producción y aplicación en caliente. Diversas granulometrías adaptadas a cada necesidad vial.</p>
+				</div>
+				<!-- Producto 2 -->
+				<div class="bg-white dark:bg-gray-700 rounded-xl shadow p-6">
+					<h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Mezclas Asfálticas en Frío</h3>
+					<p class="text-gray-600 dark:text-gray-300">Rapibach® y Rapirod®: listas para usar. Envasadas y despachadas desde nuestras plantas a todo el país.</p>
+				</div>
+				<!-- Producto 3 -->
+				<div class="bg-white dark:bg-gray-700 rounded-xl shadow p-6">
+					<h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Hormigón Elaborado</h3>
+					<p class="text-gray-600 dark:text-gray-300">Producción y entrega de hormigón para obras urbanas e industriales en Pigüé y alrededores.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	</section>
+
+	<!-- Sección Obras -->
+	<section class="py-16" id="obras">
+		<div class="bg-white/80 dark:bg-gray-900/80">
+			<div class="max-w-6xl mx-auto px-6 py-8">
+				<h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-12 text-center">OBRAS</h2>
+				<div class="grid md:grid-cols-3 gap-8">
+					<div class="bg-gray-100 dark:bg-gray-700 p-4 text-center mx-auto rounded-xl shadow">Obra Vial
+						<img src="../../public/imgs/fotos/pav05-w300.png" class="mt-2 rounded-lg"/>
+					</div>
+					<div class="bg-gray-100 dark:bg-gray-700 p-4 text-center mx-auto rounded-xl shadow">Movimiento de Suelos
+						<img src="../../public/imgs/fotos/suelo01-w300.png" class="mt-2 rounded-lg"/>	
+					</div>
+					<div class="bg-gray-100 dark:bg-gray-700 p-4 text-center mx-auto rounded-xl shadow">Hormigón
+						<img src="../../public/imgs/fotos/hormigon01-w300.png" class="mt-2 rounded-lg"/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Sección Clientes -->
+	<section class="py-16" id="clientes">
+		<div class="bg-white/80 dark:bg-gray-900/80">
+			<div class="max-w-6xl mx-auto px-6 py-8">
+				<h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-12 text-center">NUESTROS CLIENTES</h2>
+				<div class="grid md:grid-cols-3 gap-8">
+				<ClienteCard nombre="Municipio de Puerto Madrin" logo="/public/imgs/clientes/mun/puerto-madrin.png" />
+				<ClienteCard nombre="Municipio de Saavedra-Pigüé" logo="/public/imgs/clientes/mun/saavedra.png" />
+				<ClienteCard nombre="Municipio de Bahía Blanca" logo="/public/imgs/clientes/mun/bahia-blanca.webp" />
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Sección Contacto -->
+	<!-- <section class="py-16 bg-white/80 dark:bg-gray-900/80" id="contacto">
+		<div class="max-w-6xl mx-auto px-6 py-8">
+			<h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-6 text-center">Contacto</h2>
+			<form class="space-y-6">
+			<input type="text" placeholder="Nombre" class="w-full px-4 py-2 rounded border bg-white dark:bg-gray-800 dark:text-white" />
+			<input type="email" placeholder="Correo electrónico" class="w-full px-4 py-2 rounded border bg-white dark:bg-gray-800 dark:text-white" />
+			<textarea rows="5" placeholder="Mensaje" class="w-full px-4 py-2 rounded border bg-white dark:bg-gray-800 dark:text-white"></textarea>
+			<div class="g-recaptcha" data-sitekey="6Ld_6zMrAAAAAEDwD4LqYMaZtN0ScFh6MiBQouEr"></div>
+			<button type="submit" class="bg-[#718F94] hover:bg-[#FFA500] text-white px-6 py-2 rounded">Enviar</button>
+			</form>
+		</div>
+	</section> -->
+
+	<section class="py-16 bg-white/80 dark:bg-gray-900/80" id="contact-cards">
+		<div class="max-w-6xl mx-auto px-6 py-8">
+			<h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-6 text-center">Contáctenos</h2>
+			<div class="grid md:grid-cols-3 gap-8">
+				<ContactCard
+					title="Obras"
+					text="Para consultas sobre proyectos de obras, movimiento de suelos, pavimentación y alquiler de equipos."
+					whatsappLink="5492915065029"
+				/>
+				<ContactCard
+					title="Mezclas Asfálticas"
+					text="Para información sobre nuestras mezclas asfálticas en caliente y frío (Rapibach, Rapirod)."
+					whatsappLink="5492914378577"
+				/>
+				<ContactCard
+					title="Hormigón Elaborado"
+					text="Para solicitar cotización o coordinar entrega de hormigón en Pigüé y alrededores."
+					whatsappLink="5492915065034"
+				/>
+			</div>
+		</div>
+	</section>
+
+
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+	<WhatsAppButton />
+</BaseLayout>

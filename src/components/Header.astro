@@ -1,0 +1,53 @@
+---
+---
+
+<header class="sticky top-0 z-40 w-full backdrop-blur flex-none">
+  <!-- <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-end items-center h-16">
+      <nav class="flex space-x-4">
+        <a href="#productos" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium">Productos</a>
+        <a href="#obras" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium">Obras</a>
+        <a href="#clientes" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium">Clientes</a>
+        <a href="#contacto" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contacto</a>
+      </nav>
+    </div>
+  </div> -->
+  <nav class="bg-accent dark:bg-bgdark text-textlight dark:text-textdark px-6 py-4 shadow">
+    <div class="max-w-6xl mx-auto flex justify-end sm:justify-between items-center">
+      <!-- <a href="/" class="font-bold text-lg hidden sm:inline-flex"><img />Carreteras 2000 S.A.</a> -->
+      <a href="/" class="font-bold text-lg hidden sm:inline-flex">
+        <img
+          id="site-logo"
+          alt="Carreteras 2000 S.A. Logo"
+          width="200" 
+          height="auto"
+        />
+      </a>
+        <ul class="flex space-x-6 text-sm items-center">
+        <li><a href="#productos" class="hover:underline">Productos</a></li>
+        <li><a href="#obras" class="hover:underline">Obras</a></li>
+        <li><a href="#clientes" class="hover:underline">Clientes</a></li>
+        <li><a href="#contacto" class="hover:underline">Contacto</a></li>
+        <li>
+        <button
+          id="theme-toggle-btn"
+          class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white p-2 rounded-full shadow-lg transition ml-4"
+          aria-label="Cambiar tema"
+        >
+        </button>
+        </li>
+         <script type="module" src="/scripts/theme.js"></script>
+      </ul>
+    </div>
+  </nav>
+</header>
+<script>
+  const logo = document.getElementById('site-logo');
+  const body = document.body;
+
+  function updateLogo() {
+    logo.src = body.classList.contains('dark') ? '/public/imgs/logo/logow.svg' : '/public/imgs/logo/logob.svg';
+  }
+  updateLogo();
+  new MutationObserver(updateLogo).observe(body, { attributes: true, attributeFilter: ['class'] });
+</script>
