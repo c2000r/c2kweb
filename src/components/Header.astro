@@ -59,7 +59,9 @@
   const body = document.body;
 
   function updateLogo() {
-    logo.src = body.classList.contains('dark') ? '/public/imgs/logo/logow.svg' : '/public/imgs/logo/logob.svg';
+    if (logo instanceof HTMLImageElement) {
+      logo.src = body.classList.contains('dark') ? '/public/imgs/logo/logow.svg' : '/public/imgs/logo/logob.svg';
+    }
   }
   updateLogo();
   new MutationObserver(updateLogo).observe(body, { attributes: true, attributeFilter: ['class'] });
