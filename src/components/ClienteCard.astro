@@ -2,14 +2,19 @@
 export interface Props {
   nombre: string
   logo: string
+  link: string
 }
 
-const { nombre, logo } = Astro.props
+const { nombre, logo, link } = Astro.props
 ---
 <!-- Card individual para un cliente -->
-<div class="bg-white dark:bg-gray-700 rounded-xl shadow p-6 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300">
+<a 
+  class="bg-white dark:bg-gray-700 rounded-xl shadow p-6 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300"
+  href={link}
+  target="_blank"
+  >
   <!-- Logo del cliente -->
-  <img src={logo} alt={`Logo de ${nombre}`} class="h-20 object-contain mb-4 bg-white/80 rounded-lg px-2" />
+  <img src={logo} alt={`Logo de ${nombre}`} class="h-20 object-contain mb-4 bg-white/80 rounded-lg p-2" />
   <!-- Nombre del cliente -->
   <h3 class="text-lg font-semibold text-gray-800 dark:text-white">{nombre}</h3>
-</div>
+</a>
