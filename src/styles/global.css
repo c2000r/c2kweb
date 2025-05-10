@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@tailwind utilities;
+@import 'tailwindcss' layer(utilities);
+@import 'tailwindcss/utilities' layer(utilities);
 
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -10,8 +10,7 @@
   --color-textlight: oklch(27.8% 0.033 256.848);
   --color-accent: oklch(0.79 0.171 70.67);
   --color-theme01: oklch(0.63 0.0346 208.79);
-  --color-theme02:oklch(0.63 0.0298 341.28);
-
+  --color-theme02: oklch(0.63 0.0298 341.28);
 }
 
 body {
