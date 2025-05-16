@@ -3,7 +3,6 @@ const { title = "Carreteras 2000 S.A." } = Astro.props
 import Header from "../components/Header.astro"
 import "../styles/global.css"
 ---
-<body lang="es" class="text-gray-900 dark:text-gray-100 transition-colors duration-300 mx-auto bg-[url(../../public/imgs/planta600-01.jpg)] bg-bottom-left bg-cover bg-fixed bg-no-repeat min-h-screen">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,29 +11,8 @@ import "../styles/global.css"
     <link rel="icon" href="/favicon.ico" />
   </head>
 
+<body lang="es" class="text-gray-900 dark:text-gray-100 transition-colors duration-300 mx-auto bg-[url(../../public/imgs/planta600-01.jpg)] bg-bottom-left bg-cover bg-fixed bg-no-repeat min-h-screen">
 <Header />
-    <!-- Navegación principal -->
-    <!-- <nav class="bg-accent dark:bg-gray-800 text-white px-6 py-4 shadow">
-      <div class="max-w-6xl mx-auto flex justify-end sm:justify-between items-center">
-        <a href="/" class="font-bold text-lg hidden sm:inline-flex">Carreteras 2000 S.A.</a>
-        <ul class="flex space-x-6 text-sm items-center">
-          <li><a href="#productos" class="hover:underline">Productos</a></li>
-          <li><a href="#obras" class="hover:underline">Obras</a></li>
-          <li><a href="#clientes" class="hover:underline">Clientes</a></li>
-          <li><a href="#contacto" class="hover:underline">Contacto</a></li>
-          <li>
-          <button
-            id="theme-toggle-btn"
-            class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white p-2 rounded-full shadow-lg transition ml-4"
-            aria-label="Cambiar tema"
-          >
-          </button>
-          </li>
-           <script type="module" src="/scripts/theme.js"></script>
-        </ul>
-      </div>
-    </nav> -->
-
     <!-- Contenido de cada página -->
     <main class="min-h-screen">
       <slot />

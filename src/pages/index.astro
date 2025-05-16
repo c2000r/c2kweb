@@ -5,6 +5,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ClienteCard from '../components/ClienteCard.astro'
 import ContactCard from '../components/ContactCard.astro'
 import WhatsAppButton from '../components/WhatsAppButton.astro'
+import munPuertoMadrin from "../../public/imgs/clientes/mun/puerto-madrin.png";
+import munSaavedra from "../../public/imgs/clientes/mun/saavedra.png";
+import munBahiaBlanca from "../../public/imgs/clientes/mun/bahia-blanca.webp";
+import munAdolfoAlsina from "../../public/imgs/clientes/mun/adolfo-alsina.jpg";
+import vialidadBsAs from "../../public/imgs/clientes/vialidad/dvba.png";
+import vialidadNac from "../../public/imgs/clientes/vialidad/vialidad-nacional.png";
 ---
 
 <BaseLayout>
@@ -90,7 +96,7 @@ import WhatsAppButton from '../components/WhatsAppButton.astro'
 			<div class="max-w-6xl mx-auto px-6 py-8">
 				<h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-12 text-center">NUESTROS CLIENTES</h2>
 				<div class="grid md:grid-cols-3 gap-8">
-				<ClienteCard nombre="Municipio de Puerto Madrin" logo="/public/imgs/clientes/mun/puerto-madrin.png" link="https://www.madryn.gob.ar/" />
+				<ClienteCard nombre="Municipio de Puerto Madrin" logo="{munPuertoMadrin}" link="https://www.madryn.gob.ar/" />
 				<ClienteCard nombre="Municipio de Saavedra-Pigüé" logo="/public/imgs/clientes/mun/saavedra.png" link="https://https://saavedra.gob.ar/" />
 				<ClienteCard nombre="Municipio de Bahía Blanca" logo="/public/imgs/clientes/mun/bahia-blanca.webp" link="https://www.bahia.gob.ar/" />
 				<ClienteCard nombre="Municipio de Adolfo Alsina" logo="/public/imgs/clientes/mun/adolfo-alsina.jpg" link="https://www.adolfoalsina.gov.ar/" />
