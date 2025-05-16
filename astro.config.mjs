@@ -10,10 +10,5 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
-
-  // site: 'https://ruloalv.github.io',
-  // base: '/',
-  outDir: './docs',
-
   adapter: vercel(),
 });
