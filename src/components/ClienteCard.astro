@@ -6,8 +6,6 @@ export interface Props {
 }
 
 const { nombre, logo, link } = Astro.props
-
-import { Image } from 'astro:assets';
 ---
 <!-- Card individual para un cliente -->
 <a 
@@ -16,7 +14,7 @@ import { Image } from 'astro:assets';
   target="_blank"
   >
   <!-- Logo del cliente -->
-  <Image src={logo} alt={`Logo de ${nombre}`} class="h-20 object-contain mb-4 bg-white/80 rounded-lg p-2" />
+  <img src={logo} alt={`Logo de ${nombre}`} class="h-20 object-contain mb-4 bg-white/80 rounded-lg p-2" />
   <!-- Nombre del cliente -->
   <h3 class="text-lg font-semibold text-gray-800 dark:text-white">{nombre}</h3>
 </a>
